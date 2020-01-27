@@ -1,36 +1,61 @@
 <ion-header>
     <ion-toolbar>
         <ion-title>
-            Create Account
+            Profile
         </ion-title>
     </ion-toolbar>
 </ion-header>
 <ion-content>
-    <ion-item>
-        <ion-label position="floating">Name</ion-label>
-        <ion-input></ion-input>
-    </ion-item>
+    <ion-card>
+        <img src="./../../assets/me.jpg" />
+        <section style="display: flex;
+        justify-content: center;">
+            <ion-button size="small" class="btn-style">Follow</ion-button>
+            <ion-button size="small" class="btn-style">Message</ion-button>
+        </section>
+        <ion-card-header>
+            <ion-card-subtitle>Name</ion-card-subtitle>
+            <ion-card-title>Akash Mhatre</ion-card-title>
+        </ion-card-header>
+        <ion-item>
+            <ion-icon slot="end" name="logo-google"></ion-icon>
+            <ion-label>mhatreak90@gmail.com</ion-label>
+        </ion-item>
 
-    <ion-item>
-        <ion-label position="floating">Email</ion-label>
-        <ion-input></ion-input>
-    </ion-item>
+        <ion-item>
+            <ion-icon name="pin" slot="start"></ion-icon>
+            <ion-label>SPIT</ion-label>
+            <ion-button fill="outline" slot="end">View</ion-button>
+        </ion-item>
+        <ion-item>
+            <ion-label>Views</ion-label>
+            <ion-badge slot="end">21k</ion-badge>
+        </ion-item>
+    </ion-card>
 
-    <ion-item>
-        <ion-label position="floating">Phone No</ion-label>
-        <ion-input></ion-input>
-    </ion-item>
-
-    <ion-item style="margin-top: 1rem;">
-        <ion-label>Date of Birth</ion-label>
-        <ion-datetime placeholder="Select Date"></ion-datetime>
-    </ion-item>
-
-    <section style="margin-top: 1rem;">
-        <ion-button expand="block" (click)="presentAlert()">Register</ion-button>
-    </section>
-
-    <section style="margin-top: 1rem;">
-        <ion-button expand="block" (click)="presentActionSheet()">Already an user?</ion-button>
-    </section>
+    <ion-card-content>
+        Hello there! I am Akash. I am a SYMCA Student. Welcome to MP Lab.
+    </ion-card-content>
+    <ion-fab horizontal="end" vertical="top" slot="fixed" edge>
+        <ion-fab-button color="light">
+            <ion-icon name="arrow-dropdown"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="bottom">
+            <ion-fab-button color="light">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button color="light">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button color="light">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button color="light">
+                <ion-icon name="logo-google"></ion-icon>
+            </ion-fab-button>
+        </ion-fab-list>
+    </ion-fab>
+    <ion-button expand="block" (click)="presentActionSheet()">
+        Click Here
+    </ion-button>
 </ion-content>

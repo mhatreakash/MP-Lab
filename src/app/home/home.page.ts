@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActionSheetController, AlertController } from '@ionic/angular';
+import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,17 +7,35 @@ import { ActionSheetController, AlertController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
-  constructor(public actionSheetController: ActionSheetController,public alertController: AlertController) {}
+  constructor(public actionSheetController: ActionSheetController) {}
 
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
-      header: 'Options',
+      header: 'Albums',
       buttons: [{
-        text: 'Login',
+        text: 'Delete',
+        role: 'destructive',
+        icon: 'trash',
+        handler: () => {
+          console.log('Delete clicked');
+        }
+      }, {
+        text: 'Share',
+        icon: 'share',
+        handler: () => {
+          console.log('Share clicked');
+        }
+      }, {
+        text: 'Play (open modal)',
+        icon: 'arrow-dropright-circle',
+        handler: () => {
+          console.log('Play clicked');
+        }
+      }, {
+        text: 'Favorite',
         icon: 'heart',
         handler: () => {
-          console.log('Login clicked');
+          console.log('Favorite clicked');
         }
       }, {
         text: 'Cancel',
@@ -29,16 +47,5 @@ export class HomePage {
       }]
     });
     await actionSheet.present();
-  }
-
-  async presentAlert() {
-    const alert = await this.alertController.create({
-      header: 'Confirm',
-      subHeader: 'Welcome',
-      message: 'This is an alert message.',
-      buttons: ['OK', 'Cancel']
-    });
-
-    await alert.present();
   }
 }
