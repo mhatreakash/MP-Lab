@@ -1,14 +1,36 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Create Account
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
-
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+    <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="floating">Phone No</ion-label>
+        <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item style="margin-top: 1rem;">
+        <ion-label>Date of Birth</ion-label>
+        <ion-datetime placeholder="Select Date"></ion-datetime>
+    </ion-item>
+
+    <section style="margin-top: 1rem;">
+        <ion-button expand="block" (click)="presentAlert()">Register</ion-button>
+    </section>
+
+    <section style="margin-top: 1rem;">
+        <ion-button expand="block" (click)="presentActionSheet()">Already an user?</ion-button>
+    </section>
 </ion-content>
