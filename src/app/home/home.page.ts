@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActionSheetController } from '@ionic/angular';
+import { ActionSheetController, AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +7,7 @@ import { ActionSheetController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  constructor(public actionSheetController: ActionSheetController) {}
+  constructor(public actionSheetController: ActionSheetController,public alertController: AlertController) {}
 
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
@@ -26,7 +26,7 @@ export class HomePage {
           console.log('Share clicked');
         }
       }, {
-        text: 'Play (open modal)',
+        text: 'Play',
         icon: 'arrow-dropright-circle',
         handler: () => {
           console.log('Play clicked');
@@ -47,5 +47,16 @@ export class HomePage {
       }]
     });
     await actionSheet.present();
+  }
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Thanks',
+      subHeader: 'You are now following Akash',
+      message: '',
+      buttons: ['OK']
+    });
+
+    await alert.present();
   }
 }
