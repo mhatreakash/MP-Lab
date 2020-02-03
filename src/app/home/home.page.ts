@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActionSheetController, AlertController } from '@ionic/angular';
+import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +8,15 @@ import { ActionSheetController, AlertController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  username;
+  email;
+  phone;
+  dob;
 
-  constructor(public actionSheetController: ActionSheetController,public alertController: AlertController) {}
+  constructor(
+    public actionSheetController: ActionSheetController,
+    public alertController: AlertController,
+    private router: Router) {}
 
   async presentActionSheet() {
     const actionSheet = await this.actionSheetController.create({
@@ -40,5 +48,17 @@ export class HomePage {
     });
 
     await alert.present();
+  }
+
+  nextPage(){
+    const navigationExtras: NavigationExtras = {
+      state: {
+        name: this.username,
+        phone: this.phone,
+        email: this.email,
+        dob: this.dob
+      }
+    };
+    this.router.navigate(['/details'],navigationExtras);
   }
 }
