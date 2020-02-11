@@ -40,17 +40,18 @@ export class HomePage {
   }
 
   async presentAlert() {
+    this.username = this.username || 'user';
     const alert = await this.alertController.create({
       header: 'Confirm',
       subHeader: 'Welcome',
-      message: 'This is an alert message.',
+      message: 'Hello ${this.username} <br> Email :${this.email} <br>Phone :${this.phone}',
       buttons: ['OK', 'Cancel']
     });
-
+    this.username = null;
     await alert.present();
   }
 
-  nextPage(){
+  nextPage() {
     const navigationExtras: NavigationExtras = {
       state: {
         name: this.username,
@@ -59,6 +60,6 @@ export class HomePage {
         dob: this.dob
       }
     };
-    this.router.navigate(['/details'],navigationExtras);
+    this.router.navigate(['/details'], navigationExtras);
   }
 }

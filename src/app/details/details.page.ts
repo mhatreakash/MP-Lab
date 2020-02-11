@@ -7,16 +7,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./details.page.scss'],
 })
 export class DetailsPage implements OnInit {
-  data: {name: string, phone: number, email: string, dob: string}
+  data: {name: string, email: string, phone: number, dob: Date};
   constructor(private router: Router) { }
-  
+
   ngOnInit() {
-    this.data = {
-      name: 'Akash',
-      phone: 12345678,
-      email: 'akash.mhatre@spit.ac.in',
-      dob: '28-07-1997'
-    }
+    // this.data = {
+    //   name: 'Akash',
+    //   phone: 12345678,
+    //   email: 'akash.mhatre@spit.ac.in',
+    //   dob: '28-07-1997'
+    // }
+
+    const navigation = this.router.getCurrentNavigation();
+    this.data = navigation.extras.state as {
+      name: string;
+      email: string;
+      phone: number;
+      dob: Date;
+    };
   }
 
 }

@@ -1,1 +1,17 @@
+ion-content{
+    --color: #fff;
+    --background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+}
 
+ion-card{
+    --background: #ffffff;
+}
+
+ion-button{
+    --background:  #fff;
+    --color:  #2ecc71;
+}
+
+ion-button:hover{
+    --background-hover: rgb(128, 219, 245);
+}
