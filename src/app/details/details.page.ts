@@ -25,6 +25,8 @@ export class DetailsPage implements OnInit {
       phone: number;
       dob: Date;
     };
+
+    console.log(this.data);
   }
 
 }

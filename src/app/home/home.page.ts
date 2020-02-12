@@ -44,7 +44,7 @@ export class HomePage {
     const alert = await this.alertController.create({
       header: 'Confirm',
       subHeader: 'Welcome',
-      message: 'Hello ${this.username} <br> Email :${this.email} <br>Phone :${this.phone}',
+      message: 'This is an alert',
       buttons: ['OK', 'Cancel']
     });
     this.username = null;
@@ -52,6 +52,7 @@ export class HomePage {
   }
 
   nextPage() {
+    console.log(this.username);
     const navigationExtras: NavigationExtras = {
       state: {
         name: this.username,
@@ -61,5 +62,6 @@ export class HomePage {
       }
     };
     this.router.navigate(['/details'], navigationExtras);
+    console.table(navigationExtras.state);
   }
 }
