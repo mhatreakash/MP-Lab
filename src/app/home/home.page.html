@@ -8,40 +8,25 @@
 
 <ion-tabs>
     <ion-tab-bar slot="bottom">
-        <ion-tab tab="music">
-            <ion-header translucent>
-                <ion-toolbar>
-                    <ion-title>Music</ion-title>
-                </ion-toolbar>
-            </ion-header>
+        <ion-tab-button tab="dashboard">
+            <ion-icon name="calendar"></ion-icon>
+            <ion-label>Schedule</ion-label>
+            <ion-badge>6</ion-badge>
+        </ion-tab-button>
 
-            <ion-content fullscreen class="ion-padding">
-                <h1>Music</h1>
-            </ion-content>
-        </ion-tab>
+        <ion-tab-button tab="speakers">
+            <ion-icon name="person-circle"></ion-icon>
+            <ion-label>Speakers</ion-label>
+        </ion-tab-button>
 
-        <ion-tab tab="movies">
-            <ion-header translucent>
-                <ion-toolbar>
-                    <ion-title>Movies</ion-title>
-                </ion-toolbar>
-            </ion-header>
+        <ion-tab-button tab="map">
+            <ion-icon name="map"></ion-icon>
+            <ion-label>Map</ion-label>
+        </ion-tab-button>
 
-            <ion-content fullscreen class="ion-padding">
-                <h1>Movies</h1>
-            </ion-content>
-        </ion-tab>
-
-        <ion-tab tab="games">
-            <ion-header translucent>
-                <ion-toolbar>
-                    <ion-title>Games</ion-title>
-                </ion-toolbar>
-            </ion-header>
-
-            <ion-content fullscreen class="ion-padding">
-                <h1>Games</h1>
-            </ion-content>
-        </ion-tab>
+        <ion-tab-button tab="about">
+            <ion-icon name="information-circle"></ion-icon>
+            <ion-label>About</ion-label>
+        </ion-tab-button>
     </ion-tab-bar>
 </ion-tabs>
