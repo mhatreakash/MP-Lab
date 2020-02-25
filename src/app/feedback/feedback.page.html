@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Feedback Form</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position ="floating">Name</ion-label>
+        <ion-input  [(ngModel)]="username"></ion-input>
+      </ion-item>
+      <ion-item class="dropDown">
+        <ion-label>Class</ion-label>
+        <ion-select value="Select" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="mca">MCA</ion-select-option>
+          <ion-select-option value="extc">EXTC</ion-select-option>
+          <ion-select-option value="it">IT</ion-select-option>
+          <ion-select-option value="it">COMPS</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position ="floating">UID</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Do you want notification?</ion-label>
+        <ion-toggle></ion-toggle>
+      </ion-item>
+
+
+      <div style="margin-top: 1.5rem; padding: 0px 20px;">
+        <ion-label>Which features did you find in the app?</ion-label><br>
+        <ion-item>
+          <ion-checkbox color="light" slot="start"></ion-checkbox>
+          <ion-label class="checkbox-label">Aesthetically Pleasing</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-checkbox color="light" slot="start"></ion-checkbox>
+          <ion-label class="checkbox-label">Simplicity</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-checkbox color="light" slot="start"></ion-checkbox>
+          <ion-label class="checkbox-label">Transparency</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-checkbox color="light" slot="start"></ion-checkbox>
+          <ion-label class="checkbox-label">Immersion</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-checkbox color="light" slot="start"></ion-checkbox>
+          <ion-label class="checkbox-label">Positive First Impression</ion-label>
+        </ion-item>
+      </div>
+      <ion-item>
+        <ion-label position ="floating">Feedback</ion-label>
+        <ion-textarea></ion-textarea>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <div style="display: flex; justify-content: center; margin-top: 1px;">
+    <ion-button expand="block" (click)="showToast()"> SUBMIT</ion-button>
+  </div>
+</ion-content>
