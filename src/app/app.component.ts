@@ -13,9 +13,7 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar,
-    private toastController: ToastController
-  ) {
+    private statusBar: StatusBar  ) {
     this.initializeApp();
   }
   navigate;
@@ -34,16 +32,6 @@ export class AppComponent {
           title: 'Home',
           url: '/home',
           icon: 'home'
-        },
-        {
-          title: 'Chat',
-          url: '/chat',
-          icon: 'chatboxes'
-        },
-        {
-          title: 'Contacts',
-          url: '/contacts',
-          icon: 'contacts'
         },
       ];
   }
