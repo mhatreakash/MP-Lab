@@ -1,4 +1,32 @@
-.flex-container {
-    display: flex;
-    justify-content: center;
+ion-icon[name="trash"] {
+    color: red;
+    justify-self: end;
+    align-self: center;
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+ion-icon[name="pencil"] {
+    color: blue;
+    justify-self: end;
+    align-self: center;
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+ion-icon[name="person-add"] {
+    justify-self: end;
+    align-self: center;
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+ion-fab {
+    color: wheat;
+}
+
+
+ion-fab-button {
+    height: 40px;
+    width: 40px;
 }
